@@ -1,0 +1,197 @@
+@import './components.css';
+
+body {
+    margin: 0;
+    width: 100vw;
+    font-family: "Montserrat";
+    color: rgb(29%, 29%, 29%);
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+/* ! NAVIGATION */
+
+header {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    border-bottom: 3px solid grey;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav .contact {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.contactBox {
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+.contact .element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.contact .element .text {
+    font-size: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.contact .mail {
+    margin-right: 40px;
+}
+
+.contact .element .content,
+.contact .element>a {
+    margin-left: 24px;
+    font-size: 9px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: #1389db;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navigation .logo {
+    width: 35%;
+}
+
+.logo img {
+    max-width: 250px;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    padding: 26px 0;
+}
+
+.navigation .mainNavButtons {
+    width: 65%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navigation .mainNavButtons>ul {
+    list-style: none;
+    display: flex;
+    margin: unset;
+    padding: unset;
+}
+
+.navigation .mainNavButtons>ul>li {
+    padding: 26px 16px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: color .3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.navigation .mainNavButtons>ul>li::after {
+    /* z-index: -1; */
+    content: '';
+    position: absolute;
+    background-color: #1389db;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 40px);
+    transition: .3s ease-in-out;
+}
+
+.navigation .mainNavButtons>ul>li:hover,
+.navigation .mainNavButtons>ul>.active {
+    color: #1389db
+}
+
+.navigation .mainNavButtons>ul>li:hover::after,
+.navigation .mainNavButtons>ul>.active::after {
+    transform: translate(-50%, 0);
+}
+
+/* ! MAIN BANNER */
+
+.mainBanner {
+    background-image: url(./img/banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.mainBannerWrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 1100px;
+    width: 96%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.mainBannerRightContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: white;
+}
+
+.mainBannerRightContainer>div:not(:last-of-type) {
+    margin-bottom: 6vh;
+}
+
+.mainBannerRightContainer .topText {
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 900;
+}

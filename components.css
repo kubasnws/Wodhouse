@@ -1,0 +1,60 @@
+/* ! BUTTONS */
+.buttonStyle_1 {
+    padding: 14px 24px;
+    background-color: #22D9E9;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    font-family: "Montserrat";
+    font-weight: 600;
+    transition: color .3s ease-in-out;
+    transition-delay: .2s
+}
+
+.buttonStyle_1>span {
+    z-index: 2;
+}
+
+.buttonStyle_1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%) skewX(-20deg);
+    background-color: rgb(37, 185, 185);
+    width: 150%;
+    height: 100%;
+    z-index: 0;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.buttonStyle_1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%) skewX(-20deg);
+    background-color: aqua;
+    width: 150%;
+    height: 100%;
+    z-index: 1;
+    transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+    transition-delay: .02s;
+}
+
+.buttonStyle_1:hover::before,
+.buttonStyle_1:hover::after {
+    transform: translateX(-10%) skewX(-20deg);
+}
+
+.buttonStyle_1:hover {
+    color: rgb(70, 70, 70);
+}

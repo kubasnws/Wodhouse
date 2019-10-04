@@ -58,3 +58,9 @@
 .buttonStyle_1:hover {
     color: rgb(70, 70, 70);
 }
+
+/* ! TITLE TRANSFORM */
+
+.blueTitle {
+    color: #1389DB;
+}

@@ -1,4 +1,5 @@
 @import './components.css';
+@import './animations.css';
 
 body {
     margin: 0;
@@ -34,6 +35,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 20;
 }
 
 nav .contact {
@@ -164,6 +166,41 @@ nav .contact {
     align-items: center;
 }
 
+.facebookBox {
+    position: absolute;
+    top: 0;
+    right: 12vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facebookBox>.line {
+    width: 1px;
+    height: 40px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.facebookBox>a {
+    color: white;
+    font-size: 22px;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    transition: all .7s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.facebookBox>a:hover {
+
+    border-radius: 50%;
+    background-color: #3B5998;
+}
+
 .mainBannerWrapper {
     display: flex;
     justify-content: flex-end;
@@ -183,15 +220,72 @@ nav .contact {
 }
 
 .mainBannerRightContainer>div:not(:last-of-type) {
-    margin-bottom: 6vh;
+    margin-bottom: 9vh;
 }
 
 .mainBannerRightContainer .topText {
     text-transform: uppercase;
     font-size: 15px;
     letter-spacing: 1px;
-    line-height: 24px;
-    color: #ffffff;
     font-family: "Montserrat";
     font-weight: 900;
+}
+
+.mainBannerRightContainer .topText>span {
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+.mainBannerRightContainer .smallText {
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: "Montserrat";
+    font-weight: 900;
+    max-width: 460px;
+    text-align: right;
+    text-transform: uppercase;
+    margin-top: 16px;
+
+}
+
+/* ! MAIN SECTION 1 */
+
+.underBannerText {
+    max-width: 1000px;
+    width: 96%;
+    margin: 60px auto 20px auto;
+}
+
+.underBannerText>h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #2f2f2f;
+    font-family: "Montserrat";
+    font-weight: 900;
+}
+
+.mainText {
+    max-width: 700px;
+    width: 100%;
+    margin: 30px auto 0 auto;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.underBannerText .showMore>i {
+    display: block;
+    width: fit-content;
+    height: auto;
+    margin: 15px auto;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    overflow: hidden;
+}
+
+.underBannerText .hidden {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
 }
